@@ -27,7 +27,6 @@ class HomeView(View):
             'title': self.title,
         }
         if form.is_valid():
-            print('form valid')
             return redirect(self.get_success_url())
         return TemplateResponse(request, self.template_name, context)
 
