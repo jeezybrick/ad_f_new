@@ -10,7 +10,9 @@
     height: 100px;
     background-color: #76459B;
     color: #ffffff;
-    padding: 20px;;
+    padding: 20px;
+    position: absolute;.
+    bottom:0;
 }
 
 .main-text{
