@@ -15,33 +15,42 @@ class MyWidget(forms.widgets.MultiWidget):
 
     def decompress(self, value):
         if value:
-            print(value)
-            #return [value.day, value.month, value.year]
-            return ''.join(value)
+            return [value.code, value.mid, value.num]
         return [None, None, None]
 
     def format_output(self, rendered_widgets):
         return (
                 '<div class="row phone-inputs">'
-                '<div class="col-lg-12">'
+                '<div class="col-lg-12 col-xs-12">'
                 '<div class="form-inline">'
-                '<div class="col-md-3 col-xs-3 col-sm-10">%s</div>'
-                '<div class="col-md-1 col-xs-3 col-sm-10 text-center">-</div>'
-                '<div class="col-md-3 col-xs-3 col-sm-2">%s</div>'
-                '<div class="col-md-1 col-xs-3 col-sm-2 text-center">-</div>'
-                '<div class="col-md-3 col-xs-4 col-sm-2">%s</div>'
+                '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
+                '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
+                '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
+                '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
+                '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                 '</div>'
                 '</div>'
                 '</div>'
                ) % tuple(rendered_widgets)
-        # return ''.join(rendered_widgets)
+
+
+class PhoneField(forms.MultiValueField):
+    def __init__(self, *args, **kwargs):
+        list_fields = [forms.CharField(),
+                       forms.CharField(),
+                       forms.CharField()
+                       ]
+        super(PhoneField, self).__init__(list_fields, widget=MyWidget, *args, **kwargs)
+
+    def compress(self, values):
+        return values[0] + values[1] + values[2]
 
 
 class DemoForm(forms.Form):
     first_name = forms.CharField()
     last_name = forms.CharField()
     email = forms.EmailField()
-    phone = forms.CharField(required=False, widget=MyWidget, label='')
+    phone = PhoneField(required=True, label='')
     url = forms.URLField(required=False)
 
     def __init__(self, *args, **kwargs):
