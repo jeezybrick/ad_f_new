@@ -8,17 +8,7 @@
 
 {% block content %}
 
-    <header>
-        <div class="header col-lg-12 col-md--12 col-sm-12 col-xs-12 text-right">
-            <h4>
-                {% trans "Call today! 1+ 647-328-8001" %}
-            </h4>
-            <h4>
-                {% trans "Toronto, Canada" %}
-            </h4>
-
-        </div>
-    </header>
+   {% include 'partials/header.html' %}
 
     <div class="container-fluid">
         <div class="row">
@@ -55,11 +45,6 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer col-lg-12 col-md--12 col-sm-12 col-xs-12 text-right">
-            <h6>Terms of Use | Privacy Policy</h6>
-            <h6>Copyright 2016, Ad Fits Inc. All rights reserved</h6>
+    {% include 'partials/footer.html' %}
 
-        </div>
-    </footer>
 {% endblock %}

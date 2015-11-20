@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 100px;
     background-color: #76459B;
     color: #ffffff;
@@ -6,19 +6,21 @@
     margin-bottom: 40px;
 }
 
-.footer{
+.footer {
     height: 100px;
     background-color: #76459B;
     color: #ffffff;
     padding: 20px;
-    position: absolute;.
-    bottom:0;
+    position: absolute;
+    bottom : 0;
+    right: 0;
+    left: 0;
 }
 
-.main-text{
+.main-text {
     color: #76459B;
 }
 
-.propos-list{
+.propos-list {
     list-style-image: url('/static/images/list_icon.png');
 }
