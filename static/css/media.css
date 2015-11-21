@@ -1,7 +1,6 @@
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 
-
 }
 
 /* Landscape tablets and medium desktops */
@@ -12,17 +11,58 @@
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
 
-
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
+    .header {
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .header-image {
+        padding-left: 5px;
+        margin-right: -65px;
+
+    }
+
+    .header-image img {
+        height: 65px;
+
+    }
+
+    .header h4 {
+        font-size: 15px;
+
+    }
 
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+
+     .header {
+        height: 65px;
+         padding-top: 5px;
+         padding-right: 5px;
+    }
+
+    .header-image {
+        padding-left: 5px;
+        margin-right: -40px;
+
+    }
+
+    .header-image img {
+        height: 40px;
+
+    }
+
+    .header h4 {
+        font-size: 15px;
+
+    }
 
 
 }

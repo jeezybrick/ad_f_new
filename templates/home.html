@@ -8,11 +8,70 @@
 
 {% block content %}
 
-   {% include 'partials/header.html' %}
+    {% include 'partials/header.html' %}
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 col-md--12 col-sm-12 col-xs-12" style="border-bottom: 2px solid black;padding-bottom: 20px;">
+            <section class="section_1 col-lg-12 col-md--12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 center-block">
+                        <!-- <div class="widget">
+
+                        </div> -->
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                        <h2 class="main-text">
+                            <strong>{% trans "Turn-Key Gamification & Rewards Tools" %}</strong>
+                        </h2>
+
+                        <h3 class="main-text">
+                            Unlock the Power of Digital Ads 3.0
+                        </h3>
+
+                        <ul class="propos-list">
+                            <li>
+                                Deliver jaw-dropping KPIs & massive ROI to your advertising clientss
+                            </li>
+
+                            <li>
+                                Sell more premium ad units and effortlessly close more deals
+                            </li>
+
+                            <li>
+                                Build your audience with loyalty rewards and repeated ad engagement
+                            </li>
+
+                            <li>
+                                Instantly fuel the growth of your email subscriber list
+                            </li>
+
+                            <li>
+                                Spread “the love” with built-in social media amplification tools
+                            </li>
+                        </ul>
+
+                        <a href="#demo_form" class="jump-to-form-button">
+                            <h4>EXPERIENCE HOW IT WORKS!</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_2 col-lg-12 col-md--12 col-sm-12 col-xs-12">
+                <h2 class="main-text text-center">
+                   <strong>{% trans "The perfect complement to any publisher’s website" %}</strong>
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, animi assumenda dolorum error esse iure molestiae nisi quod. Accusamus at earum eligendi laboriosam nesciunt odit recusandae reprehenderit sit soluta suscipit.</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolor ea libero maiores nesciunt perferendis quas quasi repellendus sed similique, sunt voluptate! Ab aut autem in inventore laudantium tempore.</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at culpa delectus dicta doloribus earum error, facilis, illo itaque laborum numquam perferendis perspiciatis quis quisquam recusandae saepe vitae voluptate voluptatibus?</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum nihil numquam quasi similique. Adipisci alias animi commodi incidunt iste recusandae! Culpa deserunt doloribus facilis officia saepe soluta! Dolor, inventore.</div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="section_3 col-lg-12 col-md--12 col-sm-12 col-xs-12"
+                 style="">
 
                 <h2 class="main-text">
                     <strong>{% trans "Experience Ad Gamification & Rewards in Action!" %}</strong>
@@ -21,6 +80,7 @@
                 <div class="row">
 
                     <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+
                         <ul class="propos-list">
                             <li>
                                 Easily sell more premium ads to your clients
@@ -33,15 +93,33 @@
                             <li>
                                 Serendipitous rewards make everyone smile
                             </li>
+
+                            <li>
+                                Generate a huge buzz around your brand
+                            </li>
+
+                            <li>
+                                Launch campaigns in 3 super easy steps
+                            </li>
+
+                            <li>
+                                Quick turnaround time and amazing support
+                            </li>
+
+                            <li>
+                                No coding required, 100% HTML5
+                            </li>
                         </ul>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1" style="padding: 0 15px;">
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1"
+                         style="padding: 0 15px;">
+                        {% load crispy_forms_tags %}
                         {% crispy form %}
                     </div>
                 </div>
 
-            </div>
+            </section>
         </div>
     </div>
 

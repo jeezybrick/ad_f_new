@@ -21,12 +21,14 @@ class HomeView(View):
         return TemplateResponse(request, self.template_name, context)
 
     def post(self, request):
+        print(request.POST)
         form = self.form_class(data=request.POST)
         context = {
             'form': form,
             'title': self.title,
         }
         if form.is_valid():
+            print(request.POST)
             return redirect(self.get_success_url())
         return TemplateResponse(request, self.template_name, context)
 
@@ -39,7 +41,28 @@ class ThanksView(View):
     title = _('Thank you')
 
     def get(self, request):
-        print('than view')
+        context = {
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+
+class PolicyView(View):
+    template_name = 'policy.html'
+    title = _('Policy')
+
+    def get(self, request):
+        context = {
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+
+class TermsView(View):
+    template_name = 'terms.html'
+    title = _('Terms')
+
+    def get(self, request):
         context = {
             'title': self.title,
         }

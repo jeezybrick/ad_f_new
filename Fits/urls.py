@@ -25,4 +25,8 @@ urlpatterns = [
 
     url(r"^thanks/$", views.ThanksView.as_view(), name='thanks'),
 
+    url(r"^policy/$", views.PolicyView.as_view(), name='policy'),
+
+    url(r"^terms/$", views.TermsView.as_view(), name='terms'),
+
 ]

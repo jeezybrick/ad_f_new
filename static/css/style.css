@@ -1,18 +1,27 @@
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 100px;
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
 }
+.header-wrapper{
+    margin-bottom: 60px;
+     display: flex;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .header {
+
     height: 100px;
     background-color: #76459B;
     color: #ffffff;
     padding: 20px;
-    margin-bottom: 40px;
+    width: 100%;
 }
 
 .footer {
@@ -23,29 +32,94 @@ body {
     background-color: #76459B;
     color: #ffffff;
     padding: 20px;
+}
 
+.footer a {
+    color: #ffffff;
 }
 
 .main-text {
     color: #76459B;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .propos-list {
     list-style-image: url('/static/images/list_icon.png');
-}
-.thanks-block{
-    color: #76459B;
+    padding-left: 20px;
 }
 
-.thanks-block a{
+.propos-list > li {
+    color: #76459B;
+    font-size: 18px;
+}
+
+.thanks-block {
+    color: #76459B;
+    margin-top: 30px;
+}
+
+.thanks-block a {
     text-decoration: underline;
 }
-.header-image{
+
+.header-image {
+    position: relative;
+    margin-right: -80px;
     padding-top: 15px;
-    padding-left: 60px;
+    padding-left: 20px;
+    z-index: 99;
+
 }
 
-.phone-inputs div{
+.header-image img{
+    height: 80px;
+}
+
+.phone-inputs div {
     padding: 0 5px 5px 5px;
     margin: 0;
+}
+
+.widget {
+    height: 275px;
+    width: 375px;
+    border: 1px solid black;
+}
+
+.section_1 {
+    border-bottom: 2px solid black;
+    padding-bottom: 70px;
+}
+
+.section_2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 70px;
+    margin-bottom: 40px;
+}
+
+.section_2 > h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.section_3 {
+    padding-bottom: 40px;
+}
+
+.jump-to-form-button {
+    display: inline-block;
+    background-color: #5ec8f2;
+    color: #ffffff;
+    border: #85649F 2px solid;
+}
+
+.jump-to-form-button:hover {
+    text-decoration: none;
+    background-color: #5ec8f2;
+    color: #ffffff;
+}
+
+.jump-to-form-button:active {
+    background-color: blue;
 }
