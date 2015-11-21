@@ -21,13 +21,13 @@ class MyWidget(forms.widgets.MultiWidget):
     def format_output(self, rendered_widgets):
         return (
                    '<div class="row phone-inputs">'
-                   '<div class="col-lg-12 col-xs-12">'
+                   '<div class="col-lg-12 col-xs-10">'
                    '<div class="form-inline">'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
-                   '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
+                   '<div class="col-md-3 col-xs-4 col-sm-3">%s</div>'
                    '</div>'
                    '</div>'
                    '</div>'
@@ -51,7 +51,7 @@ class DemoForm(forms.Form):
     last_name = forms.CharField()
     email = forms.EmailField(required=True)
     phone = PhoneField(required=True, label='')
-    url = forms.URLField(required=False)
+    url = forms.URLField(label='Website/URL (optional)', required=False)
 
     def __init__(self, *args, **kwargs):
         super(DemoForm, self).__init__(*args, **kwargs)
@@ -63,11 +63,13 @@ class DemoForm(forms.Form):
         self.helper.form_action = '#'
         self.helper.form_class = 'form-horizontal'
         self.helper.field_class = 'col-md-7'
-        self.helper.label_class = 'hidden'
         self.form_show_errors = True
         self.helper.error_text_inline = True
         self.helper.help_text_inline = False
         self.helper.html5_required = True
+
+        self.helper.add_input(Submit('submit', 'Request demo',
+                                     css_class='jump-to-form-button'))
 
         self.helper.layout = Layout(
 
@@ -89,10 +91,6 @@ class DemoForm(forms.Form):
             )
             ,
             InlineField(
-                'url', placeholder='Website/URL (optional)'
-            ),
-            Div(
-               Submit('submit', 'Log Me In', css_class='jump-to-form-button'),
-               css_class='col-lg-offset-3 col-lg-9',
+                'url'
             )
         )

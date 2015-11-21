@@ -7,14 +7,16 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 100px;
 }
-.header-wrapper, .footer-wrapper{
+
+.header-wrapper, .footer-wrapper {
     margin-bottom: 60px;
     display: flex;
     align-items: stretch;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-.footer-wrapper{
+
+.footer-wrapper {
     margin-bottom: 0;
 }
 
@@ -42,6 +44,9 @@ body {
     color: #76459B;
     margin-top: 0;
     margin-bottom: 20px;
+}
+.list-wrapper{
+    margin-bottom: 30px;
 }
 
 .propos-list {
@@ -76,7 +81,7 @@ body {
 
 }
 
-.header-image img, .footer-image img{
+.header-image img, .footer-image img {
     height: 80px;
 }
 
@@ -90,16 +95,20 @@ body {
     width: 375px;
     border: 1px solid black;
 }
-.widget-responsive{
+
+.widget-responsive {
     border: 1px solid black;
     height: 275px;
 }
-.widget-responsive li{
+
+.widget-responsive li {
     font-weight: 900;
     font-size: 20px;
 }
-.widget-wrapper{
+
+.widget-wrapper {
     padding: 5px 30px;
+    margin-bottom: 30px;
 }
 
 .section_1 {
@@ -125,17 +134,20 @@ body {
 
 .jump-to-form-button {
     display: inline-block;
-    background-color: #5ec8f2;
     color: #ffffff;
     border: #85649F 2px solid;
+    text-transform: uppercase;
+    padding: 0 3px;
+    border-radius: 0;
+    background: #5ec8f2 none;
 }
 
-.jump-to-form-button:hover {
-    text-decoration: none;
-    background-color: #5ec8f2;
-    color: #ffffff;
+.form-wrapper {
+    padding: 0 15px;
 }
 
-.jump-to-form-button:active {
-    background-color: blue;
+.form-wrapper .jump-to-form-button {
+    background-image: none;
+    padding: 5px 30px;
+    font-weight: bold;
 }
