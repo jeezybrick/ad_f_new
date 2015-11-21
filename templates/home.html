@@ -14,10 +14,25 @@
         <div class="row">
             <section class="section_1 col-lg-12 col-md--12 col-sm-12 col-xs-12">
                 <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 center-block">
-                        <!-- <div class="widget">
-
-                        </div> -->
+                    <div class="widget-wrapper col-lg-5 col-md-5 col-sm-6 col-xs-12 center-block">
+{#                        <div class="widget">#}
+{##}
+{#                        </div>#}
+                        <div class="widget-responsive">
+                            <h2 class="text-center">Widget Demo</h2>
+                            <h3 class="text-center">(will send over code files for this area)</h3>
+                            <ul>
+                                <li>
+                                    Widget size is 375 w x 275 h px!
+                                </li>
+                                <li>
+                                    Leave space around it!
+                                </li>
+                                <li>
+                                    code is purely HTML5 here
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                         <h2 class="main-text">
@@ -51,7 +66,7 @@
                         </ul>
 
                         <a href="#demo_form" class="jump-to-form-button">
-                            <h4>EXPERIENCE HOW IT WORKS!</h4>
+                            <h4><strong>EXPERIENCE HOW IT WORKS!</strong></h4>
                         </a>
                     </div>
                 </div>
@@ -62,16 +77,16 @@
                    <strong>{% trans "The perfect complement to any publisher’s website" %}</strong>
                 </h2>
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, animi assumenda dolorum error esse iure molestiae nisi quod. Accusamus at earum eligendi laboriosam nesciunt odit recusandae reprehenderit sit soluta suscipit.</div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolor ea libero maiores nesciunt perferendis quas quasi repellendus sed similique, sunt voluptate! Ab aut autem in inventore laudantium tempore.</div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at culpa delectus dicta doloribus earum error, facilis, illo itaque laborum numquam perferendis perspiciatis quis quisquam recusandae saepe vitae voluptate voluptatibus?</div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum nihil numquam quasi similique. Adipisci alias animi commodi incidunt iste recusandae! Culpa deserunt doloribus facilis officia saepe soluta! Dolor, inventore.</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, animi assumenda dolorum error esse iure molestiae nisi quod. Accusamus at earum eligendi laboriosam nesciunt odit recusandae reprehenderit sit soluta suscipit.</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolor ea libero maiores nesciunt perferendis quas quasi repellendus sed similique, sunt voluptate! Ab aut autem in inventore laudantium tempore.</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at culpa delectus dicta doloribus earum error, facilis, illo itaque laborum numquam perferendis perspiciatis quis quisquam recusandae saepe vitae voluptate voluptatibus?</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum nihil numquam quasi similique. Adipisci alias animi commodi incidunt iste recusandae! Culpa deserunt doloribus facilis officia saepe soluta! Dolor, inventore.</div>
                 </div>
             </section>
         </div>
+
         <div class="row">
-            <section class="section_3 col-lg-12 col-md--12 col-sm-12 col-xs-12"
-                 style="">
+            <section class="section_3 col-lg-12 col-md--12 col-sm-12 col-xs-12">
 
                 <h2 class="main-text">
                     <strong>{% trans "Experience Ad Gamification & Rewards in Action!" %}</strong>
@@ -114,9 +129,29 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1"
                          style="padding: 0 15px;">
-                        {% load crispy_forms_tags %}
-                        {% crispy form %}
-                    </div>
+                        {% if form.errors %}
+                            <div class="col-md-12">
+                                <div class="panel-body">
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            {{ form.errors }}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <form action="{% url 'home' %}" class="form-horizontal" method="post">
+                            {% csrf_token %}
+                           {{ form|crispy }}
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button type="submit" class="jump-to-form-button">Request demo</button>
+                                </div>
+                            </div>
+
+                        </form>
+                        </div>
                 </div>
 
             </section>

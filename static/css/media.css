@@ -16,23 +16,23 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
-    .header {
+    .header , .footer-content{
         height: 80px;
         padding-top: 10px;
     }
 
-    .header-image {
+    .header-image, .footer-image {
         padding-left: 5px;
         margin-right: -65px;
 
     }
 
-    .header-image img {
+    .header-image img, .footer-image img {
         height: 65px;
 
     }
 
-    .header h4 {
+    .header h4, .footer-content h4 {
         font-size: 15px;
 
     }
@@ -42,24 +42,24 @@
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
-     .header {
+     .header, .footer-content {
         height: 65px;
          padding-top: 5px;
          padding-right: 5px;
     }
 
-    .header-image {
+    .header-image, .footer-image {
         padding-left: 5px;
         margin-right: -40px;
 
     }
 
-    .header-image img {
+    .header-image img, .footer-image img {
         height: 40px;
 
     }
 
-    .header h4 {
+    .header h4, .footer-content h4 {
         font-size: 15px;
 
     }

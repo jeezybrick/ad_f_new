@@ -3,23 +3,17 @@
 
 <footer class="footer">
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
-            <div class="col-lg-2 col-xs-3 header-image">
+    <div class="footer-wrapper">
+            <div class="footer-image">
                 <a href="{% url 'home' %}">
-                    <!-- <img height="85px" class="" src="{% static 'images/adfits.png' %}" alt="Logo"> -->
+                    <img src="{% static 'images/adfits.png' %}" alt="Logo">
                 </a>
             </div>
-            <div class="col-lg-5 col-xs-3 text-center">
+            <div class="footer-content text-right">
 
-            </div>
-
-            <div class="col-lg-5 col-xs-6 text-right">
                 <h6><a href="{% url 'terms' %}">Terms of Use</a> | <a href="{% url 'policy' %}">Privacy Policy</a></h6>
                 <h6>Copyright 2016, Ad Fits Inc. All rights reserved</h6>
-            </div>
         </div>
-
-
     </div>
+
 </footer>

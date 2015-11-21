@@ -3,7 +3,7 @@ from django.views.generic import View
 from django.utils.translation import ugettext_lazy as _
 from django.template.response import TemplateResponse
 from django.core.urlresolvers import reverse
-from init import forms
+from init import forms, utils
 
 
 # For login
@@ -21,16 +21,16 @@ class HomeView(View):
         return TemplateResponse(request, self.template_name, context)
 
     def post(self, request):
-        print(request.POST)
         form = self.form_class(data=request.POST)
         context = {
             'form': form,
             'title': self.title,
         }
         if form.is_valid():
-            print(request.POST)
+            utils.send_email_with_form_data(request.POST)
             return redirect(self.get_success_url())
         return TemplateResponse(request, self.template_name, context)
+        # return redirect('/#demo_form')
 
     def get_success_url(self):
         return reverse("thanks")

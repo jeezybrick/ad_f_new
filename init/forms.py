@@ -7,9 +7,9 @@ from crispy_forms.bootstrap import InlineField
 class MyWidget(forms.widgets.MultiWidget):
     def __init__(self, attrs=None):
         _widgets = (
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'maxlength': '3'}),
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'maxlength': '3'}),
-            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'maxlength': '4'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3,}'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3,}'}),
+            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'pattern': '.{4,}'}),
         )
         super(MyWidget, self).__init__(_widgets, attrs)
 
@@ -49,7 +49,7 @@ class PhoneField(forms.MultiValueField):
 class DemoForm(forms.Form):
     first_name = forms.CharField()
     last_name = forms.CharField()
-    email = forms.EmailField()
+    email = forms.EmailField(required=True)
     phone = PhoneField(required=True, label='')
     url = forms.URLField(required=False)
 
@@ -63,12 +63,11 @@ class DemoForm(forms.Form):
         self.helper.form_action = '#'
         self.helper.form_class = 'form-horizontal'
         self.helper.field_class = 'col-md-7'
+        self.helper.label_class = 'hidden'
         self.form_show_errors = True
         self.helper.error_text_inline = True
         self.helper.help_text_inline = False
-
-        self.helper.add_input(Submit('submit', 'Request demo',
-                                     css_class='jump-to-form-button'))
+        self.helper.html5_required = True
 
         self.helper.layout = Layout(
 
@@ -91,5 +90,9 @@ class DemoForm(forms.Form):
             ,
             InlineField(
                 'url', placeholder='Website/URL (optional)'
+            ),
+            Div(
+               Submit('submit', 'Log Me In', css_class='jump-to-form-button'),
+               css_class='col-lg-offset-3 col-lg-9',
             )
         )
