@@ -1,4 +1,7 @@
+import re
 from django import forms
+from django.core.exceptions import ValidationError
+from django.utils.translation import ugettext_lazy as _
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Field, Div
 from crispy_forms.bootstrap import InlineField
@@ -7,9 +10,9 @@ from crispy_forms.bootstrap import InlineField
 class MyWidget(forms.widgets.MultiWidget):
     def __init__(self, attrs=None):
         _widgets = (
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3,}'}),
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3,}'}),
-            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'pattern': '.{4,}'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}'}),
+            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'pattern': '.{4}'}),
         )
         super(MyWidget, self).__init__(_widgets, attrs)
 
@@ -21,13 +24,13 @@ class MyWidget(forms.widgets.MultiWidget):
     def format_output(self, rendered_widgets):
         return (
                    '<div class="row phone-inputs">'
-                   '<div class="col-lg-12 col-xs-10">'
+                   '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-10">'
                    '<div class="form-inline">'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
-                   '<div class="col-md-3 col-xs-4 col-sm-3">%s</div>'
+                   '<div class="col-md-4 col-xs-4 col-sm-3">%s</div>'
                    '</div>'
                    '</div>'
                    '</div>'
@@ -43,7 +46,13 @@ class PhoneField(forms.MultiValueField):
         super(PhoneField, self).__init__(list_fields, widget=MyWidget, *args, **kwargs)
 
     def compress(self, values):
-        return ' '.join(values)
+        return ''.join(values)
+
+    def clean(self, values):
+        value = ''.join(values)
+        reg = re.compile('\d{10}$')
+        if not reg.match(value):
+            raise ValidationError(_('Invalid phone format'))
 
 
 class DemoForm(forms.Form):
@@ -51,7 +60,7 @@ class DemoForm(forms.Form):
     last_name = forms.CharField()
     email = forms.EmailField(required=True)
     phone = PhoneField(required=True, label='')
-    url = forms.URLField(label='Website/URL (optional)', required=False)
+    url = forms.URLField(label=_('Website/URL (optional)'), required=False)
 
     def __init__(self, *args, **kwargs):
         super(DemoForm, self).__init__(*args, **kwargs)

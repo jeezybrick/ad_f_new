@@ -19,4 +19,4 @@ def send_email_with_form_data(data):
         data.get('url', default='---'),
     )
 
-    send_mail(subject, message, email_from, [email_to], fail_silently=False)
+    # send_mail(subject, message, email_from, [email_to], fail_silently=False)
