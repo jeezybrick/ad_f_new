@@ -6,6 +6,13 @@
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 
+     .propos-list > li, .propos-list_two > li {
+
+        font-size: 20px;
+        font-weight: 100;
+
+    }
+
 }
 
 /* Portrait tablets and small desktops */
@@ -28,7 +35,7 @@
     }
 
     .header-image img, .footer-image img {
-        height: 95px;
+        height: 90px;
 
     }
 
@@ -41,32 +48,29 @@
         height: 80px;
     }
 
+    .propos-list > li, .propos-list_two > li {
+
+        font-size: 20px;
+        font-weight: 100;
+
+    }
 
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
-    .header-wrapper, .footer-wrapper {
-        height: 55px;
-    }
 
     .header, .footer-content {
-        height: 55px;
         padding-top: 0;
         padding-right: 5px;
     }
 
     .header-image, .footer-image {
         padding-left: 5px;
-        margin-right: -40px;
 
     }
 
-    .header-image img, .footer-image img {
-        height: 60px;
-
-    }
 
     .header h4, .footer-content h4 {
         font-size: 15px;
@@ -77,8 +81,5 @@
         padding-top: 5px;
     }
 
-    .footer-images-wrapper img {
-        height: 40px;
-    }
 
 }

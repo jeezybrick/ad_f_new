@@ -23,13 +23,13 @@ class MyWidget(forms.widgets.MultiWidget):
     def format_output(self, rendered_widgets):
         return (
                    '<div class="row phone-inputs">'
-                   '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-10">'
+                   '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
                    '<div class="form-inline">'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
-                   '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
+                   '<div class="line-between-phone col-md-1 col-xs-1 col-sm-1 text-center">-<br></div>'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
-                   '<div class="col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
-                   '<div class="col-md-4 col-xs-4 col-sm-3">%s</div>'
+                   '<div class="line-between-phone col-md-1 col-xs-1 col-sm-1 text-center">-</div>'
+                   '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '</div>'
                    '</div>'
                    '</div>'
@@ -63,14 +63,14 @@ class DemoForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super(DemoForm, self).__init__(*args, **kwargs)
-        self.initial['phone'] = ['647', '328', '8001']
+        # self.initial['phone'] = ['647', '328', '8001']
 
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'demo_form'
         self.helper.form_action = '#'
         self.helper.form_class = 'form-horizontal'
-        self.helper.field_class = 'col-md-12'
+        self.helper.field_class = 'col-md-12 '
         self.form_show_errors = True
         self.helper.error_text_inline = True
         self.helper.help_text_inline = False
