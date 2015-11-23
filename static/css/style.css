@@ -51,6 +51,10 @@ body {
     background-color: #ee4577;
 }
 
+.footer-images-wrapper > a:hover {
+    text-decoration: none;
+}
+
 .main-text {
     color: #76459b;
     margin-top: 0;
