@@ -27,6 +27,13 @@ urlpatterns = [
 
     url(r"^policy/$", views.PolicyView.as_view(), name='policy'),
 
+    url(r"^policy_two/$", views.PolicyTwoView.as_view(), name='policy_two'),
+
     url(r"^terms/$", views.TermsView.as_view(), name='terms'),
+
+    url(r"^terms_two/$", views.TermsTwoView.as_view(), name='terms_two'),
+
+    url(r"^faq/$", views.FaqView.as_view(), name='faq'),
+
 
 ]

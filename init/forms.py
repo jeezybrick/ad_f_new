@@ -4,7 +4,6 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Field, Div
-from crispy_forms.bootstrap import InlineField
 
 
 class MyWidget(forms.widgets.MultiWidget):
@@ -56,11 +55,11 @@ class PhoneField(forms.MultiValueField):
 
 
 class DemoForm(forms.Form):
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    email = forms.EmailField(required=True)
+    first_name = forms.CharField(label='')
+    last_name = forms.CharField(label='')
+    email = forms.EmailField(label='', required=True)
     phone = PhoneField(required=True, label='')
-    url = forms.URLField(label=_('Website/URL (optional)'), required=False)
+    url = forms.URLField(label='', required=False)
 
     def __init__(self, *args, **kwargs):
         super(DemoForm, self).__init__(*args, **kwargs)
@@ -71,7 +70,7 @@ class DemoForm(forms.Form):
         self.helper.form_id = 'demo_form'
         self.helper.form_action = '#'
         self.helper.form_class = 'form-horizontal'
-        self.helper.field_class = 'col-md-7'
+        self.helper.field_class = 'col-md-12'
         self.form_show_errors = True
         self.helper.error_text_inline = True
         self.helper.help_text_inline = False
@@ -82,24 +81,28 @@ class DemoForm(forms.Form):
 
         self.helper.layout = Layout(
 
-            InlineField(
-                'first_name'
+            Field(
+                'first_name',
+                placeholder='First name'
             ),
-            InlineField(
-                'last_name'
+            Field(
+                'last_name',
+                placeholder='Last name'
             )
             ,
-            InlineField(
-                'email'
+            Field(
+                'email',
+                placeholder='Email'
             )
             ,
             Div(
-                InlineField(
+                Field(
                     'phone'
                 ), css_class='form-inline'
             )
             ,
-            InlineField(
-                'url'
+            Field(
+                'url',
+                placeholder=_('Website/URL (optional)')
             )
         )

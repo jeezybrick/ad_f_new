@@ -16,7 +16,7 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
-    .header , .footer-content{
+    .header, .footer-content {
         height: 80px;
         padding-top: 10px;
     }
@@ -28,7 +28,7 @@
     }
 
     .header-image img, .footer-image img {
-        height: 65px;
+        height: 95px;
 
     }
 
@@ -37,15 +37,24 @@
 
     }
 
+    .header-wrapper, .footer-wrapper {
+        height: 80px;
+    }
+
+
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
-     .header, .footer-content {
-        height: 65px;
-         padding-top: 5px;
-         padding-right: 5px;
+    .header-wrapper, .footer-wrapper {
+        height: 55px;
+    }
+
+    .header, .footer-content {
+        height: 55px;
+        padding-top: 0;
+        padding-right: 5px;
     }
 
     .header-image, .footer-image {
@@ -55,7 +64,7 @@
     }
 
     .header-image img, .footer-image img {
-        height: 40px;
+        height: 60px;
 
     }
 
@@ -64,5 +73,12 @@
 
     }
 
+    .footer-images-wrapper {
+        padding-top: 5px;
+    }
+
+    .footer-images-wrapper img {
+        height: 40px;
+    }
 
 }

@@ -11,7 +11,7 @@ def send_email_with_form_data(data):
             data.get('phone_1', default=None)+'-' + \
             data.get('phone_2', default=None)
 
-    message = 'First name: {} Last name:{} Email:{} Phone:{} Web:{}'.format(
+    message = ' First name: {}\n Last name:{}\n Email:{}\n Phone:{}\n Web:{}\n'.format(
         data.get('first_name', default=None),
         data.get('last_name', default=None),
         data.get('email', default=None),
@@ -19,4 +19,4 @@ def send_email_with_form_data(data):
         data.get('url', default='---'),
     )
 
-    # send_mail(subject, message, email_from, [email_to], fail_silently=False)
+    send_mail(subject, message, email_from, [email_to], fail_silently=False)

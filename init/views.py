@@ -67,3 +67,36 @@ class TermsView(View):
             'title': self.title,
         }
         return TemplateResponse(request, self.template_name, context)
+
+
+class FaqView(View):
+    template_name = 'faq.html'
+    title = _('FAQ')
+
+    def get(self, request):
+        context = {
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+
+class PolicyTwoView(View):
+    template_name = 'policy_two.html'
+    title = _('Policy')
+
+    def get(self, request):
+        context = {
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+
+class TermsTwoView(View):
+    template_name = 'terms_two.html'
+    title = _('Terms')
+
+    def get(self, request):
+        context = {
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
