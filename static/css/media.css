@@ -24,7 +24,7 @@
 @media (max-width: 767px) {
 
     .header, .footer-content {
-        height: 80px;
+        height: 95px;
         padding-top: 10px;
     }
 
@@ -45,7 +45,7 @@
     }
 
     .header-wrapper, .footer-wrapper {
-        height: 80px;
+        height: 95px;
     }
 
     .propos-list > li, .propos-list_two > li {

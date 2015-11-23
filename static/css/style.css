@@ -13,7 +13,7 @@ body {
     position: absolute;
     bottom: 0 !important;
     width: 100%;
-    height: 100px;
+    height: 110px;
 }
 
 .footer a {
@@ -27,7 +27,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     background-color: #5ec8f2;
-    height: 100px;
+    height: 110px;
 }
 
 .header-two-wrapper, .footer-two-wrapper {
@@ -40,7 +40,7 @@ body {
 }
 
 .header, .footer-content, .header-content-two, .footer-content-two {
-    height: 100px;
+    height: 110px;
     background-color: #76459B;
     color: #ffffff;
     padding: 20px;
@@ -95,10 +95,11 @@ body {
 
 .thanks-block a {
     color: #483276;
+    text-decoration: underline;
 }
 
-.thanks-block a {
-    text-decoration: underline;
+.thanks-block a:hover {
+    text-decoration: none;
 }
 
 .faq-block {
@@ -127,6 +128,7 @@ body {
     height: 275px;
     width: 375px;
     border: 1px solid black;
+    margin: 0 auto;
 }
 
 .widget-responsive {
