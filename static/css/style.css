@@ -105,6 +105,9 @@ body {
 .thanks-block a:hover {
     text-decoration: none;
 }
+.thanks-block h2{
+    font-weight: 100;
+}
 
 .faq-block {
     color: #bc2d6e;
