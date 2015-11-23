@@ -9,9 +9,9 @@ from crispy_forms.layout import Submit, Layout, Field, Div
 class MyWidget(forms.widgets.MultiWidget):
     def __init__(self, attrs=None):
         _widgets = (
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}'}),
-            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}'}),
-            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'pattern': '.{4}'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}', 'minlength': '3', 'maxlength': '3'}),
+            forms.widgets.TextInput(attrs={'size': '4', 'placeholder': '###', 'pattern': '.{3}', 'minlength': '3', 'maxlength': '3'}),
+            forms.widgets.TextInput(attrs={'size': '6', 'placeholder': '####', 'pattern': '.{4}', 'minlength': '4', 'maxlength': '4'}),
         )
         super(MyWidget, self).__init__(_widgets, attrs)
 
@@ -63,7 +63,6 @@ class DemoForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super(DemoForm, self).__init__(*args, **kwargs)
-        # self.initial['phone'] = ['647', '328', '8001']
 
         self.helper = FormHelper()
         self.helper.form_method = 'post'
@@ -76,23 +75,23 @@ class DemoForm(forms.Form):
         self.helper.help_text_inline = False
         self.helper.html5_required = True
 
-        self.helper.add_input(Submit('submit', 'Request demo',
+        self.helper.add_input(Submit('submit', _('Request demo!'),
                                      css_class='jump-to-form-button'))
 
         self.helper.layout = Layout(
 
             Field(
                 'first_name',
-                placeholder='First name'
+                placeholder=_('First name')
             ),
             Field(
                 'last_name',
-                placeholder='Last name'
+                placeholder=_('Last name')
             )
             ,
             Field(
                 'email',
-                placeholder='Email'
+                placeholder=_('Email')
             )
             ,
             Div(

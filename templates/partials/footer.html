@@ -11,20 +11,22 @@
         </div>
         <div class="footer-content">
 
-                <div class="footer-images-wrapper col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-                    <a href="https://twitter.com/ADfits">
-                        <img height="55px" src="{% static 'images/TwitterFinal.png' %}" alt="twitter_link">
-                    </a>
-                    <a href="https://www.linkedin.com/company/ad-fits">
-                        <img height="55px" src="{% static 'images/LinkedInFinal.png' %}" alt="lnkd_link">
-                    </a>
-                </div>
+            <!-- Icons -->
+            <div class="footer-images-wrapper col-lg-6 col-md-6 col-sm-6 hidden-xs text-right">
+                <a href="https://twitter.com/ADfits">
+                    <img height="55px" src="{% static 'images/TwitterFinal.png' %}" alt="twitter_link">
+                </a>
+                <a href="https://www.linkedin.com/company/ad-fits">
+                    <img height="55px" src="{% static 'images/LinkedInFinal.png' %}" alt="lnkd_link">
+                </a>
+            </div>
 
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-                    <h6><a href="{% url 'terms' %}">{% trans "Terms of Use" %}</a> | <a href="{% url 'policy' %}">{% trans "Privacy Policy" %}</a></h6>
-                    <h6>{% trans "Copyright 2016, Ad Fits Inc. All rights reserved" %}</h6>
-                </div>
+            <!-- Footer text -->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+                <h6><a href="{% url 'terms' %}">{% trans "Terms of Use" %}</a> | <a
+                        href="{% url 'policy' %}">{% trans "Privacy Policy" %}</a></h6>
+                <h6>{% trans "Copyright 2016, Ad Fits Inc. All rights reserved" %}</h6>
+            </div>
 
         </div>
 

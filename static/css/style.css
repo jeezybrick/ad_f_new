@@ -74,7 +74,6 @@ body {
 .propos-list > li, .propos-list_two > li {
     background: url(/static/images/list_icon1.png) no-repeat left center;
     padding: 0 0 3px 30px;
-    /* reset styles (optional): */
     list-style: none;
     margin: 0;
     line-height: 40px;
@@ -186,6 +185,7 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
-.line-between-phone{
-   margin: 5px 0 0 5px;
+
+.line-between-phone {
+    margin: 5px 0 0 5px;
 }
