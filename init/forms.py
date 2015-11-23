@@ -23,7 +23,7 @@ class MyWidget(forms.widgets.MultiWidget):
     def format_output(self, rendered_widgets):
         return (
                    '<div class="row phone-inputs">'
-                   '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
+                   '<div class="col-lg-12 col-md-11 col-sm-11 col-xs-12">'
                    '<div class="form-inline">'
                    '<div class="col-md-3 col-xs-3 col-sm-3">%s</div>'
                    '<div class="line-between-phone col-md-1 col-xs-1 col-sm-1 text-center">-<br></div>'
