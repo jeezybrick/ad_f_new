@@ -34,29 +34,9 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
-    .header, .footer-content {
-        height: 95px;
-        padding-top: 10px;
-    }
-
-    .header-image, .footer-image {
-        padding-left: 5px;
-        margin-right: -63px;
-
-    }
-
-    .header-image img, .footer-image img {
-        height: 90px;
-
-    }
-
     .header h4, .footer-content h4 {
         font-size: 15px;
 
-    }
-
-    .header-wrapper, .footer-wrapper {
-        height: 95px;
     }
 
     .propos-list > li, .propos-list_two > li {
@@ -72,7 +52,6 @@
 @media (max-width: 480px) {
 
     .header, .footer-content {
-        padding-top: 0;
         padding-right: 5px;
     }
 
