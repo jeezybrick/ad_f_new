@@ -90,4 +90,26 @@
         padding-top: 5px;
     }
 
+    .jump-to-form-button {
+        font-size: 20px;
+    }
+
+    .adf-widgetdialog .adf-modalbox {
+        width: 300px !important;
+        height: 200px !important;
+
+    }
+
+    .adf-piccover {
+        padding: 10px 30px 5px !important;
+    }
+
+    .adf-footer {
+        margin-top: 65px;
+    }
+
+    .adf-footerinfo {
+        right: 65px !important;
+    }
+
 }
