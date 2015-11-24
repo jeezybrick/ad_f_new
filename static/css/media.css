@@ -51,6 +51,14 @@
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
+    .footer-copyright {
+        padding-left: 35px;
+    }
+
+    .footer-copyright h6 {
+        font-size: 11px;
+    }
+
     .header, .footer-content {
         padding-right: 5px;
     }
