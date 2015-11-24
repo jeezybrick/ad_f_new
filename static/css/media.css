@@ -45,6 +45,11 @@
         font-weight: 100;
 
     }
+    .jump-to-form-button {
+        display: block;
+        width: 100%;
+    }
+
 
 }
 
