@@ -6,7 +6,7 @@
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-     .propos-list > li, .propos-list_two > li {
+    .propos-list > li, .propos-list_two > li {
 
         font-size: 20px;
         font-weight: 100;
@@ -17,6 +17,17 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+
+    .propos-list > li, .propos-list_two > li {
+
+        font-size: 20px;
+        font-weight: 100;
+
+    }
+
+    .jump-to-form-button {
+        font-size: 20px;
+    }
 
 }
 
@@ -60,7 +71,6 @@
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
-
     .header, .footer-content {
         padding-top: 0;
         padding-right: 5px;
@@ -71,7 +81,6 @@
 
     }
 
-
     .header h4, .footer-content h4 {
         font-size: 15px;
 
@@ -80,6 +89,5 @@
     .footer-images-wrapper {
         padding-top: 5px;
     }
-
 
 }
