@@ -94,6 +94,11 @@
         font-size: 20px;
     }
 
+    .adf-widgetdialog {
+        width: 300px !important;
+
+    }
+
     .adf-widgetdialog .adf-modalbox {
         width: 300px !important;
         height: 200px !important;
