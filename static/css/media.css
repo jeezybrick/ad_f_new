@@ -113,8 +113,8 @@
         margin-top: 65px;
     }
 
-    .adf-footerinfo {
-        right: 65px !important;
+    .adf-blackbox {
+        height: 260px !important;
     }
 
 }
