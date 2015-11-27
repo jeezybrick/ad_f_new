@@ -121,6 +121,9 @@ header.header-is-scrolled .logo-container a {
     width: 180px;
 }
 
+.hero-title {
+    margin-top: 300px;
+}
 .hero-title h1 {
     font-weight: 100;
 }
