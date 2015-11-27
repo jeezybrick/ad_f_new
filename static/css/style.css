@@ -347,8 +347,9 @@ header.header-is-scrolled .logo-container a {
     -o-background-size: cover;
 }
 
-.jump-to-form-button {
+.jump-to-form-button, .form-button , .experience-button{
     display: inline-block;
+    height: 80px!important;
     color: #ffffff;
     text-transform: uppercase;
     padding: 20px;
@@ -356,6 +357,16 @@ header.header-is-scrolled .logo-container a {
     font-size: 30px;
     border-radius: 10px;
 }
+.experience-button{
+background: #483276;
+}
+.experience-button:hover{
+background: #ee4577;
+}
+.form-button:hover {
+    background: #483276;
+}
+
 #demo_form input{
     height: 60px;
     border-radius: 10px;

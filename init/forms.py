@@ -22,14 +22,14 @@ class DemoForm(forms.Form):
         self.helper.form_id = 'demo_form'
         self.helper.form_action = '#'
         self.helper.form_class = 'form-horizontal'
-        self.helper.field_class = 'col-lg-4 col-lg-offset-4 col-md-12'
+        self.helper.field_class = 'col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1'
         self.form_show_errors = True
         self.helper.error_text_inline = True
         self.helper.help_text_inline = False
         self.helper.html5_required = True
 
         self.helper.add_input(Submit('submit', _('Request access'),
-                                     css_class='jump-to-form-button'))
+                                     css_class='form-button'))
 
         self.helper.layout = Layout(
 
