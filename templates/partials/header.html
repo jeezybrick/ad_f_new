@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 <header id="header">
-    <div class="container" style="border-bottom: 1px solid rgba(255, 255, 255, 0.27);">
+    <div class="container" style="border-bottom: 2px solid rgba(255, 255, 255, 0.7);">
         <div class="row">
 
             <ul>
@@ -10,7 +10,7 @@
                     <a href="{% url 'home' %}">
                     </a>
                 </li>
-                <li class="nav-container">
+                <li class="nav-container hidden-xs">
                     <ul id="nav">
                         <li>
                             <a href="{% url 'home' %}">Home</a>
@@ -35,6 +35,14 @@
                     </ul>
                 </li>
             </ul>
+
+            <div class="header-bars-wrapper text-right visible-xs">
+                <button>
+                    <i class="fa fa-bars fa-2x"></i>
+                </button>
+
+            </div>
+
         </div>
     </div>
 
