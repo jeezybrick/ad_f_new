@@ -1,11 +1,18 @@
 
+$('.navbar-toggle').click(function(){
+    $('#navbar').slideToggle();
+});
+
+
 <!-- Scrolled header -->
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 300) {
         $('header').addClass('header-is-scrolled');
+        $('.header-bars-wrapper').addClass('is-scrolled');
     }
     else {
         $('header').removeClass('header-is-scrolled');
+        $('.header-bars-wrapper').removeClass('is-scrolled');
     }
 });
 

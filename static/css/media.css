@@ -1,23 +1,42 @@
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 
-    .hero-title h1{
+    .hero-title h1 {
         font-size: 54px;
+    }
+
+    #navbar {
+        display: block !important;
     }
 
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-
-
+    #navbar {
+        display: block !important;
+    }
 
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-    .section-content{
+    .section-content {
         top: 10%;
+    }
+
+    .navbar-toggle {
+        display: inline-block;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+
+
+    header .logo-container {
+        margin-left: 40%;
     }
 
 }
@@ -25,16 +44,25 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
-    .section-content{
+    .section-content {
         top: 7%;
     }
 
+    #navbar {
+        display: none;
+    }
+
+    header .logo-container {
+        margin-left: 35%;
+    }
+    header .nav-container li {
+        float: none;
+    }
 
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-
 
     .adf-widgetdialog {
         width: 300px !important;
@@ -57,6 +85,11 @@
 
     .adf-blackbox {
         height: 260px !important;
+    }
+
+    header .logo-container {
+        margin-left: 20%;
+        margin-right: 0;
     }
 
 }
