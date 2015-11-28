@@ -426,10 +426,7 @@ background: #ee4577;
     color: #FFFFFF;
 }
 .main-content {
-    min-height: 100%;
-    z-index: 3;
-    position: relative;
-    background-color: #FFFFFF;
+
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
