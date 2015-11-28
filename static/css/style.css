@@ -8,6 +8,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.header-wrapper{
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -41,7 +45,7 @@ header ul {
 }
 
 header .logo-container {
-    margin: 0 60px 0 0;
+    margin: 0 55px 0 0;
 }
 
 header ul li {
@@ -421,3 +425,70 @@ background: #ee4577;
 #demo_form .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
     color: #FFFFFF;
 }
+.main-content {
+    min-height: 100%;
+    z-index: 3;
+    position: relative;
+    background-color: #FFFFFF;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.main-content.sidebar-menu-is-open {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    -ms-transform: translateX(-260px);
+    -o-transform: translateX(-260px);
+    transform: translateX(-260px);
+}
+
+header.sidebar-menu-is-open {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    -ms-transform: translateX(-260px);
+    -o-transform: translateX(-260px);
+    transform: translateX(-260px);
+}
+#sidebar-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 260px;
+    background-color: #414a61;
+    overflow-y: auto;
+    visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
+    -moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
+    transition: transform .4s 0s, visibility 0s .4s;
+    -webkit-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -o-transform: translateX(80px);
+    transform: translateX(80px);
+}
+#sidebar-nav.sidebar-menu-is-open {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+    -webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
+    -moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
+    transition: transform .4s 0s, visibility 0s 0s;
+    -webkit-overflow-scrolling: touch;
+}
+

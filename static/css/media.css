@@ -9,6 +9,10 @@
         display: block !important;
     }
 
+    .logo-footer{
+    padding-left: 60px;
+}
+
 }
 
 /* Landscape tablets and medium desktops */
@@ -16,6 +20,9 @@
     #navbar {
         display: block !important;
     }
+    .logo-footer{
+    padding-left: 50px;
+}
 
 }
 
@@ -33,11 +40,13 @@
         display: none;
     }
 
-
-
     header .logo-container {
-        margin-left: 40%;
+        margin-left: 43%;
     }
+
+    .logo-footer{
+    padding-left: 40px;
+}
 
 }
 
@@ -53,11 +62,15 @@
     }
 
     header .logo-container {
-        margin-left: 35%;
+        margin-left: 38%;
     }
     header .nav-container li {
         float: none;
     }
+     .logo-footer{
+    padding-left: 25px;
+}
+
 
 }
 
@@ -88,8 +101,16 @@
     }
 
     header .logo-container {
-        margin-left: 20%;
+        margin-left: 25%;
         margin-right: 0;
+    }
+
+    .logo-footer{
+    padding-left: 0;
+}
+    .all-rights{
+        padding-top: 5px;
+        display: block;
     }
 
 }

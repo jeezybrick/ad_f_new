@@ -1,6 +1,9 @@
 
 $('.navbar-toggle').click(function(){
-    $('#navbar').slideToggle();
+    /*$('#navbar').slideToggle();*/
+    $('.main-content').toggleClass('sidebar-menu-is-open');
+    $('header').toggleClass('sidebar-menu-is-open');
+    $('#sidebar-nav').toggleClass('sidebar-menu-is-open');
 });
 
 
