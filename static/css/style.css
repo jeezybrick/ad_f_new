@@ -98,11 +98,11 @@ header .nav-container li.cta {
 }
 
 .social-nav a {
-    padding-right: 3px !important;
+    padding-right: 0 !important;
 }
 
 .social-nav a:nth-child(2) {
-    padding-left: 3px !important;
+    padding-left: 0 !important;
 }
 
 header.header-is-scrolled .nav-container li a {
@@ -406,4 +406,11 @@ background: #ee4577;
 }
 .header-bars-wrapper{
     color: #FFFFFF;
+}
+
+.navbar-toggle {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
 }

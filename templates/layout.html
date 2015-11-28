@@ -47,36 +47,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+<!-- Jquery mask for phone input -->
+<script src="{% static 'js/jquery.mask.min.js' %}"></script>
+
+<!-- Common js -->
 <script src="{% static 'js/common.js' %}"></script>
 
-<!-- Custom ADF Widget JS  =============================-->
 
-<script text="javascript">
-    $(document).ready(function () {
-        $(".adf-blackbox ").hide();
-        $(".adf-mbox .collect").hide();
-        $(".adf-modalbox").hover(
-                function () {
-                    $(".adf-main").fadeToggle("slow", "swing");
-                    $(".adf-blackbox").fadeToggle("slow", "swing", function () {
-                        $(".adf-mbox .collect").slideToggle("fast", "swing");
-
-                    });
-                }, function () {
-                    $(".adf-mbox .collect").slideToggle("fast", "swing", function () {
-                        $(".adf-blackbox").fadeToggle("slow", "swing");
-                        $(".adf-main").fadeToggle("slow", "swing");
-
-                    });
-
-                });
-
-
-        $(".adf-modalbox").click(function () {
-            // add js code for for when user clicks on widget here
-        });
-    });
-</script>
 
 </body>
 </html>

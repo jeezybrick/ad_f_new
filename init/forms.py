@@ -1,6 +1,6 @@
 import re
 from django import forms
-from django.core.exceptions import ValidationError
+from django.core import validators
 from django.utils.translation import ugettext_lazy as _
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Field
@@ -10,7 +10,11 @@ class DemoForm(forms.Form):
     first_name = forms.CharField(label='')
     last_name = forms.CharField(label='')
     email = forms.EmailField(label='', required=True)
-    phone = forms.IntegerField(required=True, label='', min_value=0)
+    phone = forms.CharField(required=True, label='',
+                               validators=[
+                                   validators.RegexValidator(r'^\d{3}\-\d{3}\-\d{4}$',
+                                                             'Invalid phone format!',
+                                                             'invalid'), ])
     company = forms.CharField(required=False, label='')
     url = forms.URLField(label='', required=False)
 

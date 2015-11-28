@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 <header id="header">
-    <div class="container" style="border-bottom: 2px solid rgba(255, 255, 255, 0.7);">
+    <div class="container" style="border-bottom: 1px solid rgba(255, 255, 255, 1);">
         <div class="row">
 
             <ul>
@@ -10,7 +10,7 @@
                     <a href="{% url 'home' %}">
                     </a>
                 </li>
-                <li class="nav-container hidden-xs">
+                <li id="navbar" class="nav-container collapsed">
                     <ul id="nav">
                         <li>
                             <a href="{% url 'home' %}">Home</a>
@@ -37,9 +37,11 @@
             </ul>
 
             <div class="header-bars-wrapper text-right visible-xs">
-                <button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <i class="fa fa-bars fa-2x"></i>
                 </button>
+
 
             </div>
 

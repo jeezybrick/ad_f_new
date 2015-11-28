@@ -16,13 +16,18 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    .section-content{
+        top: 10%;
+    }
 
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
+    .section-content{
+        top: 7%;
+    }
 
 
 }
