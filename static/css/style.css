@@ -8,7 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.header-wrapper{
+.header-wrapper {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
@@ -69,7 +69,7 @@ header.header-is-scrolled {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
 }
 
-header.header-side-pages-is-scrolled{
+header.header-side-pages-is-scrolled {
     background-color: white !important;
     background-color: rgba(255, 255, 255, 0.92) !important;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13) !important;
@@ -140,6 +140,7 @@ header.header-is-scrolled .logo-container a {
     height: 120px;
     width: 220px;
 }
+
 #header-second.header-is-scrolled .logo-container a {
     display: block;
     background: url('/static/images/logo2.png') no-repeat;
@@ -147,9 +148,11 @@ header.header-is-scrolled .logo-container a {
     height: 120px;
     width: 220px;
 }
+
 .hero-title {
     margin-top: 300px;
 }
+
 .hero-title h1 {
     font-weight: 300;
 }
@@ -182,7 +185,7 @@ header.header-is-scrolled .logo-container a {
     font-weight: 300;
 }
 
-.section-content{
+.section-content {
     position: absolute;
     top: 30%;
 }
@@ -199,7 +202,7 @@ header.header-is-scrolled .logo-container a {
     color: #ffffff;
 }
 
- .footer-wrapper {
+.footer-wrapper {
 
 }
 
@@ -207,7 +210,6 @@ header.header-is-scrolled .logo-container a {
     background-color: #ffffff;
     margin-bottom: 60px;
 }
-
 
 .header, .footer-content, .header-content-two, .footer-content-two {
     height: 110px;
@@ -281,7 +283,6 @@ header.header-is-scrolled .logo-container a {
     position: absolute;
     left: 0;
     bottom: 5px;
-
     border-width: 2px 0 0;
     border-style: solid;
 }
@@ -301,11 +302,12 @@ header.header-is-scrolled .logo-container a {
     color: #FFFFFF;
     margin-top: 40px;
 }
-.terms-block h2{
+
+.terms-block h2 {
     color: #5d6491;
 }
 
-.policy-block h2{
+.policy-block h2 {
     color: #5d6491;
 }
 
@@ -315,7 +317,7 @@ header.header-is-scrolled .logo-container a {
     padding: 0 40px;
 }
 
-.faq-block  h2{
+.faq-block h2 {
     color: #5d6491;
 }
 
@@ -419,9 +421,9 @@ header.header-is-scrolled .logo-container a {
     -o-background-size: cover;
 }
 
-.jump-to-form-button, .form-button , .experience-button{
+.jump-to-form-button, .form-button, .experience-button {
     display: inline-block;
-    height: 80px!important;
+    height: 80px !important;
     color: #ffffff;
     text-transform: uppercase;
     padding: 20px 40px;
@@ -429,51 +431,60 @@ header.header-is-scrolled .logo-container a {
     font-size: 30px;
     border-radius: 10px;
 }
-.experience-button{
-background: #483276;
+
+.experience-button {
+    background: #483276;
 }
-.experience-button:hover{
-background: #ee4577;
+
+.experience-button:hover {
+    background: #ee4577;
 }
+
 .form-button:hover {
     background: #483276;
 }
 
-#demo_form input{
+#demo_form input {
     height: 40px;
-    border-radius: 10px;
+    border-radius: 6px;
 }
-.logo-footer{
+
+.logo-footer {
     padding: 15px 0;
 }
-.social-footer{
+
+.social-footer {
     padding: 30px 0;
 }
 
-.copyright-footer{
+.copyright-footer {
     color: #ffffff;
     padding-top: 15px;
 }
 
-.form-block{
+.form-block {
     margin-top: 55px;
 }
-.section-form{
+
+.section-form {
     padding-top: 120px;
 }
 
-.turn-key-section{
+.turn-key-section {
     top: 20%;
 }
-.turn-key-section h1{
+
+.turn-key-section h1 {
     margin-top: 0;
 }
-.header-bars-wrapper{
+
+.header-bars-wrapper {
     color: #FFFFFF;
     margin-right: 50px;
     margin-top: 15px;
 }
-.header-bars-wrapper.is-scrolled{
+
+.header-bars-wrapper.is-scrolled {
     color: black;
 }
 
@@ -486,6 +497,7 @@ background: #ee4577;
 #demo_form .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
     color: #FFFFFF;
 }
+
 .main-content {
 
     -webkit-transition-property: -webkit-transform;
@@ -502,6 +514,7 @@ background: #ee4577;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .main-content.sidebar-menu-is-open {
     -webkit-transform: translateX(-260px);
     -moz-transform: translateX(-260px);
@@ -517,6 +530,7 @@ header.sidebar-menu-is-open {
     -o-transform: translateX(-260px);
     transform: translateX(-260px);
 }
+
 #sidebar-nav {
     position: fixed;
     top: 0;
@@ -537,6 +551,7 @@ header.sidebar-menu-is-open {
     -o-transform: translateX(260px);
     transform: translateX(260px);
 }
+
 #sidebar-nav.sidebar-menu-is-open {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
