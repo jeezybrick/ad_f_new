@@ -142,17 +142,27 @@
 
         </section>
     </div>
-    <nav id="sidebar-nav">
-        <ul class="nav-2" id="nav-3">
-            <li><a href="/security">Security</a></li>
-            <li><a href="/faqs">FAQ</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/press">Press</a></li>
-            <li><a id="" href="" data-toggle="modal" data-target="#ModalContact">Contact</a></li>
-            <li><a href="#access">Get Early Access</a></li>
-        </ul>
-    </nav>
+    {% include 'partials/sidebar.html' %}
 
     {% include 'partials/footer.html' %}
 
+{% endblock %}
+
+
+{% block js %}
+
+    <script>
+        <!-- Scrolled header -->
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 300) {
+                $('header').addClass('header-is-scrolled');
+                $('.header-bars-wrapper').addClass('is-scrolled');
+            }
+            else {
+                $('header').removeClass('header-is-scrolled');
+                $('.header-bars-wrapper').removeClass('is-scrolled');
+            }
+        });
+
+    </script>
 {% endblock %}

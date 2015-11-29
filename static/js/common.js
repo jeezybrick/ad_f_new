@@ -1,26 +1,14 @@
-
-$('.navbar-toggle').click(function(){
-    /*$('#navbar').slideToggle();*/
-    $('.main-content').toggleClass('sidebar-menu-is-open');
-    $('header').toggleClass('sidebar-menu-is-open');
-    $('#sidebar-nav').toggleClass('sidebar-menu-is-open');
-});
-
-
-<!-- Scrolled header -->
-$(window).scroll(function () {
-    if ($(window).scrollTop() >= 300) {
-        $('header').addClass('header-is-scrolled');
-        $('.header-bars-wrapper').addClass('is-scrolled');
-    }
-    else {
-        $('header').removeClass('header-is-scrolled');
-        $('.header-bars-wrapper').removeClass('is-scrolled');
-    }
-});
-
-<!-- Custom ADF Widget JS  =============================-->
 $(document).ready(function () {
+
+    $('.navbar-toggle').click(function () {
+        /*$('#navbar').slideToggle();*/
+        $('.main-content').toggleClass('sidebar-menu-is-open');
+        $('header').toggleClass('sidebar-menu-is-open');
+        $('#sidebar-nav').toggleClass('sidebar-menu-is-open');
+    });
+
+
+    <!-- Custom ADF Widget JS  =============================-->
     $(".adf-blackbox ").hide();
     $(".adf-mbox .collect").hide();
     $(".adf-modalbox").hover(

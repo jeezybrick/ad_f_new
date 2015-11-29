@@ -16,7 +16,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100px;
+    height: 121px;
     width: 100%;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -45,7 +45,7 @@ header ul {
 }
 
 header .logo-container {
-    margin: 0 55px 0 0;
+    margin: 0 10px 0 0;
 }
 
 header ul li {
@@ -56,9 +56,9 @@ header ul li {
 header .logo-container a {
     display: block;
     background: url('/static/images/logo_white.png') no-repeat;
-    background-size: 170px 90px;
-    height: 90px;
-    width: 180px;
+    background-size: 220px 120px;
+    height: 120px;
+    width: 220px;
 }
 
 header.header-is-scrolled {
@@ -70,7 +70,7 @@ header.header-is-scrolled {
 }
 
 header .nav-container {
-    margin: 26px 0 27px;
+    margin: 46px 0 27px;
     float: right;
 }
 
@@ -83,12 +83,13 @@ header .nav-container li {
 }
 
 header .nav-container li a {
-    padding: 0 35px;
+    padding: 0 20px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     font-family: "Flama Medium", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     color: #FFFFFF;
@@ -120,20 +121,20 @@ header.header-is-scrolled .nav-container li.cta {
 header.header-is-scrolled .logo-container a {
     display: block;
     background: url('/static/images/logo1.png') no-repeat;
-    background-size: 170px 90px;
-    height: 90px;
-    width: 180px;
+    background-size: 220px 120px;
+    height: 120px;
+    width: 220px;
 }
 
 .hero-title {
-    margin-top: 300px;
+    margin-top: 350px;
 }
 .hero-title h1 {
     font-weight: 100;
 }
 
 .container {
-    width: 85%;
+    width: 80%;
 }
 
 .image-half {
@@ -236,12 +237,13 @@ header.header-is-scrolled .logo-container a {
 
 .thanks-block {
     color: #483276;
-    margin-top: 30px;
+    margin-top: 200px;
     padding: 0 40px;
+
 }
 
 .thanks-block a {
-    color: #483276;
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
@@ -249,13 +251,18 @@ header.header-is-scrolled .logo-container a {
     text-decoration: none;
 }
 
+.thanks-block h1 {
+    margin-bottom: 60px;
+}
+
 .thanks-block h2 {
     font-weight: 100;
+    color: #FFFFFF;
 }
 
 .faq-block {
     color: #bc2d6e;
-    margin-top: 30px;
+    margin-top: 200px;
     padding: 0 40px;
 }
 
@@ -327,8 +334,8 @@ header.header-is-scrolled .logo-container a {
     filter: alpha(opacity=90);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity-ie)";
     background-color: #6cceec;
-    background-image: -webkit-linear-gradient(#6cceec 12%, #f37074);
-    background-image: linear-gradient(#6cceec 12%, #f37074);
+    background-image: -webkit-linear-gradient(#B9A2CC 42%, #AEE2F7);
+    background-image: linear-gradient(#B9A2CC 42%, #AEE2F7);
 }
 
 .section_5:before {
@@ -342,8 +349,8 @@ header.header-is-scrolled .logo-container a {
     filter: alpha(opacity=90);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity-ie)";
     background-color: #6cceec;
-    background-image: -webkit-linear-gradient(#6cceec 12%, #f37074);
-    background-image: linear-gradient(#6cceec 12%, #ffffff);
+    background-image: -webkit-linear-gradient(#6cceec 5%, #ffffff 70%);
+    background-image: linear-gradient(#6cceec 5%, #ffffff 70%);
 }
 
 .section_6 {
@@ -411,6 +418,7 @@ background: #ee4577;
 .header-bars-wrapper{
     color: #FFFFFF;
     margin-right: 50px;
+    margin-top: 15px;
 }
 .header-bars-wrapper.is-scrolled{
     color: black;
