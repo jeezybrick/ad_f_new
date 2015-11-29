@@ -5,6 +5,7 @@ $(document).ready(function () {
         $('.main-content').toggleClass('sidebar-menu-is-open');
         $('header').toggleClass('sidebar-menu-is-open');
         $('#sidebar-nav').toggleClass('sidebar-menu-is-open');
+        $('.header-bars-wrapper i').toggleClass('fa-times').toggleClass('fa-bars');
     });
 
 
