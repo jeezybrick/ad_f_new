@@ -2,7 +2,7 @@
 @media (min-width: 1200px) {
 
     .hero-title h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .hero-title h2 {
@@ -71,6 +71,10 @@
         margin-left: 37%;
     }
 
+    header .faq-logo {
+        margin-left: 0;
+    }
+
     .logo-footer {
         padding-left: 40px;
     }
@@ -114,6 +118,10 @@
         margin-left: 33%;
     }
 
+    header .faq-logo {
+        margin-left: 0;
+    }
+
     header .nav-container li {
         float: none;
     }
@@ -153,8 +161,6 @@
 
         font-size: 25px;
     }
-
-
 
 }
 
@@ -220,8 +226,13 @@
 
         font-size: 20px;
     }
-    .image-half img{
+
+    .image-half img {
         height: 200px;
+    }
+
+    .nav-container {
+        display: none;
     }
 
 }
@@ -244,7 +255,7 @@
         font-size: 12px;
     }
 
-    .section_3{
+    .section_3 {
         height: 800px;
     }
 
@@ -257,11 +268,11 @@
         font-size: 15px;
     }
 
-    .image-half{
+    .image-half {
         height: 170px;
     }
 
-    .image-half img{
+    .image-half img {
         height: 150px;
     }
 

@@ -37,7 +37,22 @@
 {% block js %}
 
     <script>
-        $('header').addClass('header-is-scrolled');
+        $('.header-wrapper').css('border-bottom', '#483276 1px solid');
+        $('header').addClass('header-is-scrolled').addClass('header-side-pages');
         $('.header-bars-wrapper').addClass('is-scrolled');
     </script>
+
+    <script>
+        <!-- Scrolled header -->
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 300) {
+                $('header').addClass('header-side-pages-is-scrolled');
+            }
+            else {
+                $('header').removeClass('header-side-pages-is-scrolled');
+            }
+        });
+
+    </script>
+
 {% endblock %}

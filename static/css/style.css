@@ -69,6 +69,21 @@ header.header-is-scrolled {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
 }
 
+header.header-side-pages-is-scrolled{
+    background-color: white !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13) !important;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13) !important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13) !important;
+}
+
+header.header-side-pages {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 header .nav-container {
     margin: 46px 0 27px;
     float: right;
@@ -136,7 +151,7 @@ header.header-is-scrolled .logo-container a {
     margin-top: 300px;
 }
 .hero-title h1 {
-
+    font-weight: 300;
 }
 
 .hero-title h2 {
@@ -156,7 +171,7 @@ header.header-is-scrolled .logo-container a {
 }
 
 .text-half h1 {
-
+    font-weight: 300;
 }
 
 .text-half h3 {
@@ -164,6 +179,7 @@ header.header-is-scrolled .logo-container a {
     color: #5d6491;
     line-height: 130%;
     margin: 30px 0;
+    font-weight: 300;
 }
 
 .section-content{
@@ -254,7 +270,20 @@ header.header-is-scrolled .logo-container a {
 
 .thanks-block a {
     color: #FFFFFF;
-    text-decoration: underline;
+    text-decoration: none;
+    position: relative;
+}
+
+.thanks-block a:after {
+    content: '';
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+
+    border-width: 2px 0 0;
+    border-style: solid;
 }
 
 .thanks-block a:hover {
