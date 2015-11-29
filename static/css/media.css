@@ -171,13 +171,13 @@
     }
 
     .adf-widgetdialog {
-        width: 300px !important;
+        width: 270px !important;
 
     }
 
     .adf-widgetdialog .adf-modalbox {
-        width: 300px !important;
-        height: 200px !important;
+        width: 270px !important;
+        height: 180px !important;
 
     }
 
@@ -245,7 +245,7 @@
     }
 
     .section_3{
-        height: 900px;
+        height: 800px;
     }
 
     .section_5 {
@@ -255,6 +255,14 @@
     .jump-to-form-button, .form-button, .experience-button {
 
         font-size: 15px;
+    }
+
+    .image-half{
+        height: 170px;
+    }
+
+    .image-half img{
+        height: 150px;
     }
 
 }

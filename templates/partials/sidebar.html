@@ -1,10 +1,10 @@
+{% load i18n %}
+
 <nav id="sidebar-nav">
     <ul class="nav-2" id="nav-3">
-        <li><a href="/security">Security</a></li>
-        <li><a href="/faqs">FAQ</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/press">Press</a></li>
-        <li><a id="" href="" data-toggle="modal" data-target="#ModalContact">Contact</a></li>
-        <li><a href="#access">Get Early Access</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'home' %}">How it works</a></li>
+        <li class="cta"><a href="#section-form">REQUEST ACCESS</a></li>
+
     </ul>
 </nav>
