@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 <footer class="footer">
-    <div class="container-fluid">
+    <div class="container footer-container">
         <div class="row">
 
             <div class="logo-footer col-lg-5 col-md-5social-footer col-sm-5 col-xs-4">
@@ -11,16 +11,16 @@
 
             <div class="social-footer col-lg-2 col-md-2 col-sm-2 text-center hidden-xs">
                 <a href="https://twitter.com/ADfits" target="_blank">
-                    <img height="35px" src="{% static 'images/greytwitter.png' %}" alt="">
+                    <img height="35" src="{% static 'images/greytwitter.png' %}" alt="Twitter">
                 </a>
                 <a href="https://www.linkedin.com/company/ad-fits" target="_blank">
-                    <img height="35px" src="{% static 'images/greylinkedin.png' %}" alt="">
+                    <img height="35" src="{% static 'images/greylinkedin.png' %}" alt="LinkedIn">
                 </a>
             </div>
 
             <div class="copyright-footer col-lg-5 col-md-5 col-sm-5 col-xs-8 text-right">
                 <h5><a href="{% url 'terms' %}">Terms of Use</a> | <a href="{% url 'policy' %}">Privacy Policy</a></h5>
-                <h5>Copyright 2016, Ad Fits Inc. <span class="all-rights">All rights reserved.</span></h5>
+                <h5 class="copyright-text">Copyright &copy; 2016, Ad Fits Inc. <span class="all-rights">All rights reserved.</span></h5>
             </div>
 
         </div>

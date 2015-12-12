@@ -1,0 +1,30 @@
+
+#sidebar-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 260px;
+  background-color: #414a61;
+  overflow-y: auto;
+  visibility: hidden;
+  transition: transform .4s 0s, visibility 0s .4s;
+  transform: translateX(260px);
+  &.sidebar-menu-is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform .4s 0s, visibility 0s 0s;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.section-join-network {
+  height: 800px;
+  .widget-block {
+
+  }
+  .form-block {
+    background: url('/static/images/main_background.jpg') center;
+    background-size: cover;
+  }
+}
