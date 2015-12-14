@@ -125,7 +125,60 @@ class JoinNetworkView(View):
             #utils.send_email_with_form_data(request.POST)
             return redirect(self.get_success_url())
         return TemplateResponse(request, self.template_name, context)
-        # return redirect('/#demo_form')
+
+    def get_success_url(self):
+        return reverse("advertisers")
+
+
+class AdvertisersView(View):
+    template_name = 'advertisers.html'
+    title = _('Advertisers')
+    form_class = forms.JoinNetworkForm
+
+    def get(self, request):
+        form = self.form_class()
+        context = {
+            'form': form,
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+    def post(self, request):
+        form = self.form_class(data=request.POST)
+        context = {
+            'form': form,
+            'title': self.title,
+        }
+        if form.is_valid():
+            return redirect(self.get_success_url())
+        return TemplateResponse(request, self.template_name, context)
+
+    def get_success_url(self):
+        return reverse("get-code")
+
+
+class GetCodeView(View):
+    template_name = 'get_code.html'
+    title = _('Get code')
+    form_class = forms.JoinNetworkForm
+
+    def get(self, request):
+        form = self.form_class()
+        context = {
+            'form': form,
+            'title': self.title,
+        }
+        return TemplateResponse(request, self.template_name, context)
+
+    def post(self, request):
+        form = self.form_class(data=request.POST)
+        context = {
+            'form': form,
+            'title': self.title,
+        }
+        if form.is_valid():
+            return redirect(self.get_success_url())
+        return TemplateResponse(request, self.template_name, context)
 
     def get_success_url(self):
         return reverse("home")

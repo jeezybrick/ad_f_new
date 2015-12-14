@@ -590,26 +590,108 @@ nav {
 
 .section-join-network {
   position: relative;
-  height: 800px;
+  width: 100%;
+  height: 1100px;
+
   .widget-block {
-    height: 790px;
-    h2{
-      color: $header_purple;
+    height: 1100px;
+    padding: 25px 15px;
+    &-logo {
+
     }
-    h3{
+    &-questions {
+      h2 {
+        margin: 0;
+        line-height: 0.7em;
+      }
+    }
+    h2 {
+      color: $header_purple;
+      font-weight: 500;
+    }
+    h3 {
       color: $common_purple;
+      font-weight: 500;
+      font-size: 1.4em;
+    }
+    h4 {
+      margin-top: 30px;
+      color: $header_purple;
+      font-weight: 700;
+    }
+    .widget-wrapper {
+      margin-top: 40px;
     }
   }
   .form-block {
-    height: 800px;
+    height: 1100px;
     margin-top: 0;
-    background: url('/static/images/main_background.jpg') center;
+    background: url('/static/images/join-network-bg.jpeg') center;
     background-size: cover;
-    h3,h4{
+    padding: 10px 15px;
+    h3, h4 {
       color: $white;
+      font-weight: 600;
+      padding-left: 0;
+    }
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
     .help-block {
-    color: $white;
+      color: $white;
+      font-size: 1.2em;
+      font-weight: 600;
     }
   }
+}
+
+#div_id_accept {
+  margin-left: 9%;
+  padding-left: 15px;
+}
+
+#id_accept {
+  transform: scale(2.0);
+  margin-right: 10px;
+}
+
+#hint_id_accept {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+#div_id_phone {
+  margin-bottom: 0;
+}
+
+.advertisers-header, .get-code-header {
+  margin-top: 50px;
+  h2 {
+    color: $header_purple_text;
+    font-weight: 600;
+  }
+}
+
+.sponsor-network-text {
+  margin-top: 15%;
+}
+
+.get-code-content {
+  margin-bottom: 100px;
+  h2 {
+    color: $common_purple;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+  }
+  .get-code-block {
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 35%;
+  }
+  .form-button {
+    width: 300px;
+  }
+
 }

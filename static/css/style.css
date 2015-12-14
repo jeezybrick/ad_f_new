@@ -494,19 +494,82 @@ nav ul, nav ol {
 
 .section-join-network {
   position: relative;
-  height: 800px; }
+  width: 100%;
+  height: 1100px; }
   .section-join-network .widget-block {
-    height: 790px; }
+    height: 1100px;
+    padding: 25px 15px; }
+    .section-join-network .widget-block-questions h2 {
+      margin: 0;
+      line-height: 0.7em; }
     .section-join-network .widget-block h2 {
-      color: #483276; }
+      color: #483276;
+      font-weight: 500; }
     .section-join-network .widget-block h3 {
-      color: #5d6491; }
+      color: #5d6491;
+      font-weight: 500;
+      font-size: 1.4em; }
+    .section-join-network .widget-block h4 {
+      margin-top: 30px;
+      color: #483276;
+      font-weight: 700; }
+    .section-join-network .widget-block .widget-wrapper {
+      margin-top: 40px; }
   .section-join-network .form-block {
-    height: 800px;
+    height: 1100px;
     margin-top: 0;
-    background: url("/static/images/main_background.jpg") center;
-    background-size: cover; }
+    background: url("/static/images/join-network-bg.jpeg") center;
+    background-size: cover;
+    padding: 10px 15px; }
     .section-join-network .form-block h3, .section-join-network .form-block h4 {
-      color: #fff; }
+      color: #fff;
+      font-weight: 600;
+      padding-left: 0; }
+    .section-join-network .form-block h4 {
+      margin-top: 30px;
+      margin-bottom: 30px; }
     .section-join-network .form-block .help-block {
-      color: #fff; }
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 600; }
+
+#div_id_accept {
+  margin-left: 9%;
+  padding-left: 15px; }
+
+#id_accept {
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  margin-right: 10px; }
+
+#hint_id_accept {
+  margin-top: 0;
+  margin-left: 10px; }
+
+#div_id_phone {
+  margin-bottom: 0; }
+
+.advertisers-header, .get-code-header {
+  margin-top: 50px; }
+  .advertisers-header h2, .get-code-header h2 {
+    color: #76459b;
+    font-weight: 600; }
+
+.sponsor-network-text {
+  margin-top: 15%; }
+
+.get-code-content {
+  margin-bottom: 100px; }
+  .get-code-content h2 {
+    color: #5d6491;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 50px; }
+  .get-code-content .get-code-block {
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    border: 1px solid gray;
+    width: 35%; }
+  .get-code-content .form-button {
+    width: 300px; }

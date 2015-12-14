@@ -32,7 +32,11 @@ urlpatterns = [
 
     url(r"^faq/$", views.FaqView.as_view(), name='faq'),
 
-    url(r"^join-network/$", views.JoinNetworkView.as_view(), name='faq'),
+    url(r"^join-network/$", views.JoinNetworkView.as_view(), name='join-network'),
+
+    url(r"^publisher/advertisers/$", views.AdvertisersView.as_view(), name='advertisers'),
+
+    url(r"^publisher/sites/get-code/$", views.GetCodeView.as_view(), name='get-code'),
 
 
 ]

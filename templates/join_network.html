@@ -10,13 +10,30 @@
 
 
 
-    <div class="main-content">
+    <div class="main-content join-network-wrapper">
+
         <!-- First section -->
         <section class="section-join-network col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
             <div class="row">
                 <div class="widget-block col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                    {% include 'partials/widget.html' %}
+                    <div class="row">
+                        <div class="widget-block-logo col-lg-4">
+                            <img src="{% static 'images/adfits.png' %}" alt="adfits">
+                        </div>
+                        <div class="widget-block-questions col-lg-8">
+                            <h2>
+                                <small>Questions?</small>
+                            </h2>
+                            <h2>
+                                <small>Call us at 647-328-8001 to get started.</small>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="widget-wrapper">
+                        {% include 'partials/widget.html' %}
+                    </div>
+
                     <h2>
                         WELCOME TO THE WORLD’S 1 ST !
                         GAMIFICATION & REWARDS NETWORK
@@ -42,13 +59,13 @@
                     </h4>
                 </div>
                 <div class="form-block col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                    <h3>
+                    <h3 class="col-lg-offset-1 col-md-offset-1">
                         Join and watch how easy it is to use the power!
                         of gamification & rewards to monetize your website.
 
                     </h3>
 
-                    <h4>
+                    <h4 class="col-lg-offset-1 col-md-offset-1">
                         Please fill out all fields.
                     </h4>
 

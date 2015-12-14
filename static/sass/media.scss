@@ -32,6 +32,18 @@
   .section_3 .image-half {
     text-align: left;
   }
+
+  .section-join-network {
+    height: 950px;
+
+    .widget-block {
+      height: 950px;
+    }
+    .form-block {
+      height: 950px;
+    }
+  }
+
 }
 
 /* Landscape tablets and medium desktops */
@@ -64,6 +76,7 @@
       line-height: 140%;
     }
   }
+
 }
 
 /* Portrait tablets and small desktops */
