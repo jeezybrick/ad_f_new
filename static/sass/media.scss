@@ -34,13 +34,17 @@
   }
 
   .section-join-network {
-    height: 950px;
+    height: 100vh;
 
     .widget-block {
-      height: 950px;
+      min-height: 100%;
+      padding: 65px 15px;
+
     }
     .form-block {
-      height: 950px;
+      min-height: 100%;
+      padding: 40px 15px;
+
     }
   }
 
@@ -75,6 +79,28 @@
       font-size: 18px;
       line-height: 140%;
     }
+  }
+
+  .section-join-network {
+    height: 120vh;
+
+    .widget-block {
+      min-height: 100%;
+      padding: 45px 15px;
+
+    }
+    .form-block {
+      min-height: 100%;
+      padding: 30px 15px;
+
+    }
+  }
+
+  .widget-block-questions{
+    h2{
+     font-size: 1.9em;
+    }
+
   }
 
 }
@@ -125,6 +151,18 @@
     h2 {
       font-size: 18px;
       line-height: 140%;
+    }
+  }
+
+
+  .section-join-network {
+    height: 800px;
+
+    .widget-block {
+      height: 800px;
+    }
+    .form-block {
+      height: 800px;
     }
   }
 }
@@ -196,6 +234,7 @@
   .section-form h1 {
     margin-top: 50px;
   }
+
 }
 
 /* Portrait phones and smaller */

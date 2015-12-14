@@ -21,11 +21,13 @@
   .section_3 .image-half {
     text-align: left; }
   .section-join-network {
-    height: 950px; }
+    height: 100vh; }
     .section-join-network .widget-block {
-      height: 950px; }
+      min-height: 100%;
+      padding: 65px 15px; }
     .section-join-network .form-block {
-      height: 950px; } }
+      min-height: 100%;
+      padding: 40px 15px; } }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -45,7 +47,17 @@
     font-size: 24px; }
   .faq-block h2 {
     font-size: 18px;
-    line-height: 140%; } }
+    line-height: 140%; }
+  .section-join-network {
+    height: 120vh; }
+    .section-join-network .widget-block {
+      min-height: 100%;
+      padding: 45px 15px; }
+    .section-join-network .form-block {
+      min-height: 100%;
+      padding: 30px 15px; }
+  .widget-block-questions h2 {
+    font-size: 1.9em; } }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -76,7 +88,13 @@
     font-size: 24px; }
   .faq-block h2 {
     font-size: 18px;
-    line-height: 140%; } }
+    line-height: 140%; }
+  .section-join-network {
+    height: 800px; }
+    .section-join-network .widget-block {
+      height: 800px; }
+    .section-join-network .form-block {
+      height: 800px; } }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {

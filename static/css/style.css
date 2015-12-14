@@ -495,9 +495,10 @@ nav ul, nav ol {
 .section-join-network {
   position: relative;
   width: 100%;
-  height: 1100px; }
+  min-height: 100vh;
+  padding: 0; }
   .section-join-network .widget-block {
-    height: 1100px;
+    height: 100%;
     padding: 25px 15px; }
     .section-join-network .widget-block-questions h2 {
       margin: 0;
@@ -510,13 +511,13 @@ nav ul, nav ol {
       font-weight: 500;
       font-size: 1.4em; }
     .section-join-network .widget-block h4 {
-      margin-top: 30px;
+      margin-top: 50px;
       color: #483276;
       font-weight: 700; }
     .section-join-network .widget-block .widget-wrapper {
       margin-top: 40px; }
   .section-join-network .form-block {
-    height: 1100px;
+    height: 100%;
     margin-top: 0;
     background: url("/static/images/join-network-bg.jpeg") center;
     background-size: cover;
@@ -547,7 +548,7 @@ nav ul, nav ol {
   margin-top: 0;
   margin-left: 10px; }
 
-#div_id_phone {
+#div_id_country {
   margin-bottom: 0; }
 
 .advertisers-header, .get-code-header {
@@ -558,6 +559,10 @@ nav ul, nav ol {
 
 .sponsor-network-text {
   margin-top: 15%; }
+  .sponsor-network-text h2 {
+    color: #76459b;
+    font-size: 1.8em;
+    margin: 10px; }
 
 .get-code-content {
   margin-bottom: 100px; }
@@ -573,3 +578,6 @@ nav ul, nav ol {
     width: 35%; }
   .get-code-content .form-button {
     width: 300px; }
+
+.advertisers-content .form-button {
+  width: 300px; }
